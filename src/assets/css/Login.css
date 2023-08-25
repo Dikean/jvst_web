@@ -1,0 +1,163 @@
+/* Button INicio*/
+#button_login {
+  background-color: var(--color-cornflowerblue-100);
+  color: var(--color-white);
+font-family: var(--font-raleway);
+font-weight: 900;
+font-size: 15px;
+  padding: auto;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Agregar esta línea para eliminar el subrayado */
+}
+
+#button_login:hover {
+  background-color: var(--color-primary);
+}
+
+
+/*Columna photo*/
+
+.container-fluid {
+  height: 100vh;
+}
+
+.fondo-azul {
+  background-color: var(--color-cornflowerblue-200);
+  height: 100vh;
+}
+
+.fondo-azul h1{
+color: var(--color-white);
+padding: 15px;
+font-family: var(--font-raleway);
+font-weight: 900;
+font-size: 30px;
+}
+
+.img-fluid {
+  height: 80vh;
+}
+
+/*Columna Login*/
+.contenedorLogin {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .contenedorLogin input[type="text"],
+  .contenedorLogin input[type="password"] {
+    width: 60%;
+    border-radius: 20px;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Colocar en una línea separada */
+  }
+  
+  .contenedorLogin input[type="text"]::placeholder,
+  .contenedorLogin input[type="password"]::placeholder {
+    color: gray;
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  
+  .contenedorLogin button {
+    
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    width: 60%;
+    border-radius: 20px;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Colocar en una línea separada */
+  }
+
+  .titleLogin{
+    margin-bottom: 6%;
+    font-family: var(--font-raleway);
+    font-weight: 900;
+    font-size: 40px;
+  }
+  
+  .createAccount{
+    font-family: var(--font-poppins);
+    font-weight: 500;
+  }
+
+  /*Movil*/
+  @media (max-width: 591px) {
+
+    .contenedorLogin input[type="text"],
+    .contenedorLogin input[type="password"] {
+      width: 85%;
+      border-radius: 20px;
+      margin: 0 auto; /* Centrar horizontalmente */
+      display: block; /* Colocar en una línea separada */
+    }
+    
+    .contenedorLogin input[type="text"]::placeholder,
+    .contenedorLogin input[type="password"]::placeholder {
+      color: gray;
+      font-family: var(--font-poppins);
+      font-weight: 600;
+      font-size: 15px;
+    }
+  
+    
+    .contenedorLogin button {
+      
+      font-family: var(--font-poppins);
+      font-weight: 600;
+      width: 85%;
+      border-radius: 20px;
+      margin: 0 auto; /* Centrar horizontalmente */
+      display: block; /* Colocar en una línea separada */
+    }
+
+    .createAccount{
+      font-size: 14px;  
+      font-family: var(--font-poppins);
+      font-weight: 500;
+    }
+
+  }
+   
+  /*Tablet*/
+  @media (min-width: 592px) and (max-width: 991px) {
+    .contenedorLogin {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .contenedorLogin input[type="text"],
+    .contenedorLogin input[type="password"] {
+      width: 60%;
+      border-radius: 20px;
+      margin: 0 auto; /* Centrar horizontalmente */
+      display: block; /* Colocar en una línea separada */
+    }
+    
+    .contenedorLogin input[type="text"]::placeholder,
+    .contenedorLogin input[type="password"]::placeholder {
+      color: gray;
+      font-family: var(--font-poppins);
+      font-weight: 600;
+      font-size: 15px;
+    }
+  
+    
+    .contenedorLogin button {
+      
+      font-family: var(--font-poppins);
+      font-weight: 600;
+      width: 60%;
+      border-radius: 20px;
+      margin: 0 auto; /* Centrar horizontalmente */
+      display: block; /* Colocar en una línea separada */
+    }
+  }

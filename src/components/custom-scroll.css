@@ -1,0 +1,20 @@
+/* Anchura del scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Manija del scrollbar */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
+/* Manija del scrollbar al pasar el ratón por encima */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

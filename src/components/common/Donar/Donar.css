@@ -1,0 +1,47 @@
+/* start Donar*/
+.donar-absolute {
+    position: fixed;
+    cursor: pointer;
+    top: 25%;
+    right: 0;
+    z-index: 1;
+    width: 100px; /* Ajusta el ancho según sea necesario */
+    height: 50px;
+    border-radius: 70px 0 0 70px;
+    overflow: hidden;
+    background-color: var(#003785); /* Color de fondo blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Elimina subrayado en el texto */
+    color: #fff; /* Color del texto */
+    font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  
+  /* Agrega estilos para el icono */
+  .donar-absolute i {
+    margin-top: 8%;
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 18px;
+    display: inline-block; /* Coloca el icono en la misma línea que el texto */
+  
+  }
+  
+  /*Pequeñas*/
+  @media (max-width: 591px) {
+    .donar-absolute {
+      position: fixed;
+      cursor: pointer;
+      top: 12%;
+    }
+  }
+  /*Medianas*/
+  @media (min-width: 592px) and (max-width: 991px) {
+    .donar-absolute {
+      position: fixed;
+      cursor: pointer;
+      top: 12%;
+    }
+  }
+  
+  /*End Donar*/

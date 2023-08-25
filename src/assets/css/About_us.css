@@ -1,0 +1,501 @@
+/* Menu */
+#nav{
+    position: fixed;
+    top: 0;
+    height: 80px;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+  
+  .navbar{
+  top: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  padding-left: 125px;
+  padding-right: 125px;
+  
+  }
+  
+  .idioma {
+    position: fixed;
+    top: 6.61px;
+    left: calc(92%);
+    width: 66px;
+    height: 24.39px;
+    margin-left: 32px;
+  }
+  
+  .icon_small{
+    height: 25px;
+  }
+
+  .idioma a {
+    text-decoration: none;
+  }
+  
+  @media (max-width: 991px) {
+    .idioma {
+      position: static;
+      left: auto;
+      margin-left: 0;
+    }
+  }
+  
+  .nav-link {
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin-right: 15px;
+    color: var(--color-black);
+  }
+  
+  .nav-item.active .nav-link {
+    border-bottom: 2px solid var(--color-cornflowerblue-100);
+    color: var(--color-primary); ;
+  }
+  
+  #button_login{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: auto;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+  }
+  
+  #button_login:hover {
+    background-color: var(--color-cornflowerblue-200);
+  }
+  @media (min-width: 992px) {
+      /* Aplicar altura del 12% solo en pantallas más grandes que 767px (tablets y escritorio) */
+      .navbar {
+        height: 12%;
+      }
+    }
+    
+  /* Movil and tablet*/
+    @media (max-width: 991px) {
+     /* Navbar movil*/
+     
+     #nav{
+      height: 60px;
+    }
+    #navbarNav{
+      margin-top: 10px;
+      background-color: #ffffff;
+      padding-left: 10%;
+     height: 230px;
+    }
+     .navbar{
+        top: 0;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        }
+      /* Estilos para dispositivos móviles */
+      .navbar-toggler {
+        background-color: var(--color-cornflowerblue-100); /* Color de fondo deseado */
+        color: var(--color-primary); /* Color de texto deseado */
+      }
+    
+      /* Estilos para dispositivos móviles */
+      .navbar-toggler-icon {
+        background-image: url('../../assets/img/Img_menu_responsive.png'); /* Ruta de la imagen de la hamburguesa */
+        width: 30px; /* Ancho deseado de la imagen */
+        height: 30px; /* Altura deseada de la imagen */
+      }
+    }
+  
+    @media (max-width: 991px) {
+      /* Aplicar margen de 10px a los enlaces en dispositivos móviles y tablets */
+      .nav-link {
+        margin-top: 15px;
+      }
+    }
+  
+  /*End Menu*/
+
+/* start Donar*/
+.donar-absolute {
+  position: fixed;
+  cursor: pointer;
+  top: 20%;
+  right: 0;
+  z-index: 1;
+  width: 100px; /* Ajusta el ancho según sea necesario */
+  height: 50px;
+  border-radius: 70px 0 0 70px;
+  overflow: hidden;
+  background-color: var(--color-primary); /* Color de fondo blanco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Elimina subrayado en el texto */
+  color: #fff; /* Color del texto */
+  font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+/* Agrega estilos para el icono */
+.donar-absolute i {
+  margin-top: 8%;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  font-size: 18px;
+  display: inline-block; /* Coloca el icono en la misma línea que el texto */
+
+}
+
+/*Pequeñas*/
+@media (max-width: 591px) {
+  .donar-absolute {
+    position: fixed;
+    cursor: pointer;
+    top: 12%;
+  }
+}
+/*Medianas*/
+@media (min-width: 592px) and (max-width: 991px) {
+  .donar-absolute {
+    position: fixed;
+    cursor: pointer;
+    top: 12%;
+  }
+}
+
+/*End Donar*/
+
+
+  /* start Chat*/
+.circle-content {
+  position: fixed;
+  cursor: pointer;
+  top: 80%;
+  margin-left: 90%;
+  z-index: 1;
+  background-color: var(--color-white);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.circle-content img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.circle-content:hover {
+  background-color: var(--color-primary);
+}
+
+.circle-content:hover::before {
+  opacity: 1;
+}
+
+
+@media (max-width: 591px) {
+  .circle-content {
+    position: fixed;
+    top: 85%;
+    margin-left: 75%;
+    z-index: 1;
+    background-color: var(--color-white);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 592px) and (max-width: 991px) {
+  .circle-content {
+    position: fixed;
+    top: 85%;
+    margin-left: 85%;
+    z-index: 1;
+    background-color: var(--color-white);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+/* About Page name */
+.About_page_cuadro-azul {
+  background-color: var(--color-cornflowerblue-200);
+  text-align: center;
+  padding: 20px;
+}
+.About_page_cuadro-azul h1{
+color:var(--color-white);
+margin-top: 7%;
+font-size: 20px;
+font-family: var(--font-poppins);
+font-weight: 900;
+}
+
+@media (max-width: 591px) {
+  .About_page_cuadro-azul {
+    background-color: var(--color-cornflowerblue-200);
+    text-align: center;
+    padding: 20px;
+  }
+  .About_page_cuadro-azul h1{
+  color:var(--color-white);
+  margin-top: 18%;
+  font-size: 20px;
+  font-family: var(--font-poppins);
+  font-weight: 900;
+  }
+}
+/* COntentido Page cuadro 1 */
+
+/* start animacion photo 01*/
+/* Animación de la imagen */
+.About_us_foto {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.About_us_foto.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Animación del cuadro de texto */
+.cuadro_1 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.cuadro_1.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#cuadro_1_p {
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+/* Estilos adicionales */
+.Square_01 {
+  margin-top: 5%;
+  margin-bottom: 17%;
+}
+
+.About_us_foto {
+  border-radius: 20px;
+}
+
+.cuadro_1 h5 {
+  color: var(--color-cornflowerblue-200);
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 15px;
+  margin-top: 5%;
+  margin-left: 4%;
+}
+
+.cuadro_1 h1 {
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  font-size: 25px;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.cuadro_1 p {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+/* Animación cuadro2 */
+.animate-right-to-left {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-right-to-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/*content cuadro 2*/
+.cuadro_2 h5 {
+  color: var(--color-cornflowerblue-200);
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 15px;
+  margin-top: 5%;
+  margin-left: 4%;
+}
+
+.cuadro_2 h1 {
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  font-size: 25px;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.cuadro_2 p {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+#cuadro_2_p {
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+
+.About_us_foto02 {
+  border-radius: 20px;
+}
+
+/*Suscribete*/
+.Susbribete {
+  margin-top: 10%;
+  margin-bottom: 18%;
+  background-color: var(--color-cornflowerblue-100);
+  border-radius: 20px;
+}
+
+.Susbribete .colum-1{
+  margin-top: 5%;
+  padding: 80px;
+}
+
+.Susbribete .colum-1 p{
+  color: #b9ffff;
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+
+
+.Susbribete .colum-2 .img-fluid{
+  margin-left: 55px;
+  width: 80%;
+  height: 420px;
+}
+
+.Susbribete h2 {
+  color:var(--color-white);
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  margin-bottom: 5%;
+}
+
+.custom-input {
+  position: relative;
+}
+
+.custom-input::before {
+  content: "\f0e0"; /* Código del icono deseado (por ejemplo, el código de un sobre) */
+  font-family: "Font Awesome"; /* Asegúrate de tener enlazada la fuente de Font Awesome */
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Ajusta el valor según el espaciado deseado */
+  transform: translateY(-50%);
+  font-size: 1.2rem; /* Ajusta el tamaño del icono según sea necesario */
+  color: #888; /* Ajusta el color del icono según sea necesario */
+}
+
+.custom-input::after {
+  content: "Texto"; /* Texto a mostrar al lado del icono */
+  position: absolute;
+  top: 50%;
+  left: 30px; /* Ajusta el valor según el espaciado deseado */
+  transform: translateY(-50%);
+  font-size: 1rem; /* Ajusta el tamaño del texto según sea necesario */
+  color: #333; /* Ajusta el color del texto según sea necesario */
+}
+
+/* Start Footer*/
+#ContentFooter{
+  padding: 40px;
+  color: var(--color-white);
+  }
+  
+  .footer {
+    background-color: var(--color-primary);
+    display: flex;
+  }
+  .parrafoFooter{
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .footer_small {
+    background-color: var(--color-darkslateblue-100);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    height: 60px;
+    color: var(--color-white);
+  }
+  .footer-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-link i {
+    margin-right: 5px;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  
+  
+  /*Small footer*/
+  
+  .footer_small .container {
+   text-align: center;
+  }
+  
+  .footer_small p {
+    margin: 0;
+  }
+  
+  .footer_small span {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
