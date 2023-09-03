@@ -1,13 +1,13 @@
 // api/usuarios
 import axios from 'axios';
 import { Apiurl } from './Auth';
-const BASE_URL = Apiurl +'api'; // Cambia esto si tu base URL es diferente
+const BASE_URL = Apiurl +'API'; // Cambia esto si tu base URL es diferente
 
 export const UserApi = {
 
     // Nuevo método de inicio de sesión
   iniciarSesion: (credentials) => {
-    const url = `${BASE_URL}/auth`; // Ajusta la URL para iniciar sesión en tu API
+    const url = `${BASE_URL}/login_jvst.php`; // Ajusta la URL para iniciar sesión en tu API
     return axios.post(url, credentials);
   },
 
@@ -18,7 +18,7 @@ export const UserApi = {
     },
 
   registrarUsuario: (userData) => {
-    const url = `${BASE_URL}/users`; // Ajusta la URL de registro en tu API
+    const url = `${BASE_URL}/register-user_jvst.php`; // Ajusta la URL de registro en tu API
     return axios.post(url, userData);
   },
 

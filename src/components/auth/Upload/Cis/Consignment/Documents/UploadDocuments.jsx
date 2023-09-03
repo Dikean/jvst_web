@@ -42,14 +42,14 @@ const handleUploadFile = async () => {
   let uploadedCount = 0;
 
   // Mostrar SweetAlert de carga
-  Swal.fire({
-    title: 'Cargando...',
-    allowOutsideClick: false,
-    showConfirmButton: false,
-    willOpen: () => {
-      Swal.showLoading();
-    },
-  });
+// Mostrar SweetAlert de carga
+Swal.fire({
+  title: "Cargando...",
+  allowOutsideClick: false, // Evita que el usuario cierre la alerta haciendo clic fuera de ella
+  onBeforeOpen: () => {
+    Swal.showLoading();
+  },
+});
 
   for (let i = 0; i < uploadedFile.length; i++) {
     const file = uploadedFile[i];
@@ -65,7 +65,7 @@ const handleUploadFile = async () => {
       console.log('Datos a enviar:', formData);
 
       const response = await DocumentsApi.enviarDatos(formData);
-
+      
       console.log('Archivo enviado exitosamente:', response.data);
 
       uploadedCount++;
@@ -324,7 +324,7 @@ const handleDeleteDocument = async () => {
             class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600"
           >
             <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
-            <a href={'https://example-api-5zs0.onrender.com'+documento.file}> ver </a>
+            <a href={'https://example-api-5zs0.onrender.com'+documento.file} target="_blank"> ver </a>
           </span>
         </td>
         <td class="px-6 py-4"> 
@@ -337,7 +337,7 @@ const handleDeleteDocument = async () => {
         </td>
         <td class="px-6 py-4">
           <div class=" gap-4">
-            <a x-data="{ tooltip: 'Delete' }" href="#"
+            <a x-data="{ tooltip: 'Delete' }"
              onClick={() => handleDeleteDocument()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -25,15 +25,15 @@ function HeaderLanding() {
       style={{ position: 'fixed', width: '100%', top: '0', zIndex: 300 }}
     >
       {/* Logo */}
-      <Navbar.Brand href="/" >
+      <Navbar.Brand >
         
-      <a href="/" class=" hidden md:block flex items-center lg:ml-[130px]">
+      <Link to="/" class=" hidden md:block flex items-center lg:ml-[130px]">
       <img src={Logo} class="" alt="Logo Header" />
-      </a>
+      </Link>
 
-      <a href="/" class="block sm:hidden flex items-center ">
+      <Link to="/" class="block sm:hidden flex items-center ">
       <img src={LogoMovil} class="" alt="Logo Header" />
-      </a>
+      </Link>
       </Navbar.Brand>
       {/* Menu */}
       <div className="flex md:order-2 lg:mr-[150px]">
@@ -72,29 +72,37 @@ function HeaderLanding() {
       <Navbar.Collapse>
         <Navbar.Link
           active
-          href="/"
-         
         >
-          <p className={Inicio ? 'text-blue-500 font-popins hover:text-blue-800' : 'text-black font-popins'}>
+          <Link to="/">
+             <p className={Inicio ? 'text-blue-500 font-popins hover:text-blue-800' : 'text-black font-popins'}>
             Inicio
           </p>
+          </Link>
+         
         </Navbar.Link>
-        <Navbar.Link href="/About_us">
+        <Navbar.Link>
+
+        <Link to="/About_us">
           <p className={About_us ? 'text-blue-500  font-popins hover:text-blue-800' : 'text-black font-popins'}>
             Quienes somos
           </p>
-          
+          </Link>
+
         </Navbar.Link>
-        <Navbar.Link href="/Contact">
+        <Navbar.Link >
+        <Link to="/Contact">
         <p className={Contact ? 'text-blue-500 font-popins hover:text-blue-800' : 'text-black font-popins'}>
             Contacto
           </p>
+          </Link>
         </Navbar.Link>
-        <Navbar.Link href="/Login" 
-        >
+        <Navbar.Link >
+           <Link to="/Login">
           <p className='text-black font-popins'>
             Login
           </p>
+          </Link>
+
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

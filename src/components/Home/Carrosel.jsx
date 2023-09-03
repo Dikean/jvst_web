@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+import { Link } from 'react-router-dom';
 //Imagenes
 import imagen from '../../assets/img/Carrousel_01.jpg'
 import imagen02 from '../../assets/img/Carrousel_02.jpg'
@@ -36,8 +36,9 @@ function Carrousel() {
                Únete a nuestra causa y juntos marquemos la diferencia.</p>
                {/* Botones */}
                <div className="mt-5 lg:mt-[35px] flex justify-center">
-                <a href="/Register" className="font-raleway bg-blue-500 text-white px-4 py-2 rounded shadowmr-5">Registrate</a>
-                <a href="/Login" className="font-raleway bg-blue-500 text-white px-4 py-2 rounded shadow ml-5">Login</a>
+                <a  href="/#/Register" className="font-raleway bg-blue-500 text-white px-4 py-2 rounded shadowmr-5">Registrate</a>
+                <a href="/#/Login" className="font-raleway bg-blue-500 text-white px-4 py-2 rounded shadow ml-5">Login</a>
+             
                 </div>
             </div>
           </div>

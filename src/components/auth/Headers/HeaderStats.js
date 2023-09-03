@@ -16,16 +16,17 @@ export default function HeaderStats() {
 
 
   useEffect(() => { 
+    
     async function fetchSumas() {
       try {
         const response = await ConsignmentApi.obtenerNequi();
         const responseBancolombia = await ConsignmentApi.obtenerBancolombia();
         
         // Format the numbers with thousands separators
-        const formattedSumaAbnColombia = responseBancolombia.data.toLocaleString('es-CO');
-        const formattedSumaNequi = response.data.toLocaleString('es-CO');
+        const formattedSumaAbnColombia = responseBancolombia.data ? responseBancolombia.data.toLocaleString('es-CO') : '';
+        const formattedSumaNequi = response.data ? response.data.toLocaleString('es-CO') : '';        
         
-        console.log("bancolombia " + formattedSumaAbnColombia);
+        console.log("bancolombia : " + formattedSumaAbnColombia);
         setSumaAbnColombia(formattedSumaAbnColombia);
         setSumaNequi(formattedSumaNequi);
       } catch (error) {

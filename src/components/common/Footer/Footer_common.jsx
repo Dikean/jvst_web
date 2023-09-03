@@ -2,7 +2,7 @@
 
 import { Footer } from 'flowbite-react';
 import { BsDribble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
-
+import { Link } from 'react-router-dom';
 //COMPONENTS
 import LogoFooterLg from '../../../assets/img/Logo_footer.png'
 function Footer_common() {
@@ -16,29 +16,37 @@ function Footer_common() {
       <div className="w-full text-white">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
-          <a href="/" className=" hidden lg:block">
+          <Link to="/" className=" hidden lg:block">
           <img
            src={LogoFooterLg} // Asegúrate de importar la imagen correctamente para pantallas grandes
             alt="Logo jvst"
            className="ml-[135px] w-[200px] " // Esto asegurará que la imagen mantenga su proporción
            />
-         </a>
+         </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
               <Footer.Title title="Enlaces Rapidos" />
               <Footer.LinkGroup col>
-                <Footer.Link href="/About_us">
+                <Footer.Link >
+                <Link to="/About_us">
                  Quienes somos
+                 </Link>
                 </Footer.Link>
-                <Footer.Link href="#">
+                <Footer.Link >
+                <Link to="/Contact">
                 Contacto
+                </Link>
                 </Footer.Link>
-                <Footer.Link href="Register">
+                <Footer.Link >
+                <Link to="/Register">
                 Registro
+                </Link>
                 </Footer.Link>
-                <Footer.Link href="/Login">
+                <Footer.Link >
+                <Link to="/Login">
                   Login
+                  </Link>
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -56,11 +64,15 @@ function Footer_common() {
             <div>
               <Footer.Title title="Legal" />
               <Footer.LinkGroup col>
-                <Footer.Link href="/Privacy_policy">
+                <Footer.Link >
+                <Link to="/Privacy_policy">
                   Privacy Policy
+                  </Link>
                 </Footer.Link>
-                <Footer.Link href="/Terms&Conditions">
+                <Footer.Link>
+                <Link to="/Terms&Conditions">
                   Terms & Conditions
+                  </Link>
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>

@@ -71,6 +71,12 @@ function Forgot_password() {
           // Cerrar SweetAlert2 de carga
           Swal.close();
       
+          Swal.fire(
+            'Se envio la nueva contraseña a su correo!',
+            'revise su correo!',
+            'success'
+          )
+
           navigate('/Login');
           // Aquí podrías mostrar un mensaje de éxito en la interfaz de usuario
         } catch (error) {
@@ -121,7 +127,7 @@ function Forgot_password() {
         </div>
         <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
             <span>No tienes cuenta?</span>
-            <a href="/Register" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Crear</a>
+            <a href="/#/Register" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Crear</a>
         </p>
     </form>
 </div>

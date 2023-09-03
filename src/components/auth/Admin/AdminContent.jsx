@@ -101,13 +101,6 @@ export default function AdminContent() {
         title="Consignaciones"
       ><TableAllConsigment valorProp={valorInput} />
       </Tabs.Item>
-       {/* Cis */}
-      <Tabs.Item
-        icon={HiClipboardList}
-        title="cis"
-      >
-        <TableAllCIS valorProp={valorInput}/> 
-      </Tabs.Item>
     </Tabs.Group>
 
       <FooterAdmin/>

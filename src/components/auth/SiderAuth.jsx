@@ -250,31 +250,6 @@ import LogoSidebarMovil from '../../assets/img/LogoMovil.png'
 </Link>
               </li>
 
-              <li className="items-center">
-              <Link
-  className={
-    "text-xs uppercase py-3 font-bold flex items-center " +
-    (window.location.href.indexOf("/admin/dashboard") !== -1
-      ? "text-lightBlue-500 hover:text-lightBlue-600"
-      : "text-blueGray-700 hover:text-blueGray-500")
-  }
-  to="/dashboard/uploadCis"
->
-  <div className="bg-blue-500 p-2 rounded-lg shadow-md">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-</svg>
-
-  </div>
-
-
-  <div className="flex items-center ml-4">
-   SUBIR Cis
-  </div>
-
-</Link>
-
-              </li>
 
   {/* Divider */}
   <hr className="my-4 md:min-w-full" />

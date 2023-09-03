@@ -3,17 +3,19 @@ import React, { useState, useEffect } from "react";
 import { UserApi } from "../../../services/UserApi";
 import Swal from 'sweetalert2';
 import Cookies from 'js-cookie';
+import { useNavigate } from "react-router-dom";
+
 // components
 import Menu_perfil from "./Menu_perfil";
 
 export default function PerfilSettings() {
 
+  const navigate = useNavigate();
   const [Personals, setPersonal] = useState ([]);  
   const UserID = Cookies.get('User_id');
     
   const [formData, setFormData] = useState({
     name: "",
-    lastname: "",
     address: "",
     city: "",
     country: "",
@@ -32,19 +34,27 @@ export default function PerfilSettings() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-      // Validar que todos los campos estén llenos
-  for (const key in formData) {
-    if (!formData[key]) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Campos vacíos',
-        text: 'Por favor, complete todos los campos antes de guardar.',
-      });
-      return; // Detener el envío del formulario si hay campos vacíos
+  
+    // Validar que todos los campos estén llenos
+    for (const key in formData) {
+      if (!formData[key]) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Campos vacíos',
+          text: 'Por favor, complete todos los campos antes de guardar.',
+        });
+        return; // Detener el envío del formulario si hay campos vacíos
+      }
     }
-  }
-
+  
+    // Mostrar SweetAlert de carga
+    Swal.fire({
+      title: 'Cargando...',
+      allowOutsideClick: false,
+      onBeforeOpen: () => {
+        Swal.showLoading();
+      },
+    });
   
     try {
       const cambios = {}; // Objeto para almacenar los campos que han cambiado
@@ -67,37 +77,30 @@ export default function PerfilSettings() {
       }
   
       const nuevosDatos = {
-
         date: new Date().toISOString(),
         users_id: UserID,
-        name: formData.name, // Asegúrate de que sea "name"
-        lastname: formData.lastname, // Asegúrate de que sea "lastname"
-        address: formData.address, // Asegúrate de que sea "address"
-        postal_code: formData.postal_code, // Asegúrate de que sea "postal_code"
-        city: formData.city, // Asegúrate de que sea "city"
-        country: formData.country, // Asegúrate de que sea "country"
-        about_me: formData.about_me, // Asegúrate de que sea "about_me"
-
+        name: formData.name,
+        address: formData.address,
+        postal_code: formData.postal_code,
+        city: formData.city,
+        country: formData.country,
+        about_me: formData.about_me,
       };
-  
-    
-      // Agrega un console.log para ver los datos antes de enviar la solicitud
-      console.log('Datos a enviar al servidor:', nuevosDatos);
   
       // Utiliza Axios para enviar la solicitud PUT al servidor
       const response = await UserApi.actualizarUsuario(UserID, nuevosDatos);
   
-      console.log('Da enviado exitosamente:', response.data);
- 
+      // Ocultar el SweetAlert de carga
+      Swal.close();
+  
       Swal.fire({
-  icon: 'success',
-  title: 'Datos enviados!',
-  text: 'Los datos se han enviado correctamente.',
-}).then(() => {
-  // Recargar la página después de darle "OK" en el SweetAlert2
-  window.location.reload();
-});
-
+        icon: 'success',
+        title: 'Datos enviados!',
+        text: 'Los datos se han enviado correctamente.',
+        confirmButtonText: 'OK',
+      }).then(() => {
+        window.location.reload();
+      });
     } catch (error) {
       console.error('Error al enviar los datos:', error);
       Swal.fire({
@@ -107,6 +110,7 @@ export default function PerfilSettings() {
       });
     }
   };
+  
 
       //Consumir la PAi y traer datos
  useEffect(() => {
@@ -157,7 +161,7 @@ export default function PerfilSettings() {
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                     htmlFor="grid-password"
                   >
-                   Nombre
+                   Nombre y apellido Completo
                   </label>
                   <input
                    value={formData.name} 
@@ -170,7 +174,7 @@ export default function PerfilSettings() {
                   />
                 </div>
               </div>
-              <div className="w-full lg:w-6/12 px-4">
+              <div className="w-full lg:w-6/12 px-4 hidden">
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -179,12 +183,10 @@ export default function PerfilSettings() {
                     Apellidos
                   </label>
                   <input
-                   value={formData.lastname}
-                   onChange={handleInputChange}
-                   id="lastname"
+                   value="sdasdsa"
                     type="text"
                     className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    placeholder={Personals.lastname}
+                 
                   />
                 </div>
               </div>

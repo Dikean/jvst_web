@@ -9,7 +9,6 @@ import UploadDocument from "../../components/auth/Upload/Cis/Consignment/Documen
 import Medicina_info from "../../components/auth/Perfil/InformationUser/Medicina_info";
 import Familiares_info from "../../components/auth/Perfil/InformationUser/Familiares_info";
 import Referencias_info from "../../components/auth/Perfil/InformationUser/Referencias";
-import CisContent from "../../components/auth/Upload/Cis/CisContent";
 import AdminContent from "../../components/auth/Admin/AdminContent";
 import HeaderNormal from "../../components/auth/Headers/HeaderNormal";
 import Error404 from "../Error404";
@@ -36,10 +35,6 @@ function Dashboard() {
     else if (location.pathname === "/dashboard/uploadDocuments") {
       return <UploadDocument />;
     } 
-    //CIs
-    else if (location.pathname === "/dashboard/uploadCis") {
-      return <CisContent />;
-    }
     //Perfil usuario
     else if (location.pathname === "/dashboard/Medicina_info") {
       return <Medicina_info />;

@@ -1,3 +1,4 @@
+import { HashRouter, Route } from 'react-router-dom';
 
 import HeaderLanding from "../components/common/Header/HeaderLanding";
 import Footer_common from "../components/common/Footer/Footer_common";

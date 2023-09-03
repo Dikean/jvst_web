@@ -1,6 +1,6 @@
 //library
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 //database
@@ -44,20 +44,20 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/About_us" element={<About_us />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Forgot_password" element={<Forgot_password />} />
-        <Route path="/Privacy_policy" element={<Privacy_policy />} />
-        <Route path="/Terms&Conditions" element={<Terms />} />
-        <Route path="/dashboard/*" element={<DashboardWithAuthorization />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+    <Routes>
+      <Route path="/" element={<Inicio />} />
+      <Route path="/About_us" element={<About_us />} />
+      <Route path="/Contact" element={<Contact />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Register" element={<Register />} />
+      <Route path="/Forgot_password" element={<Forgot_password />} />
+      <Route path="/Privacy_policy" element={<Privacy_policy />} />
+      <Route path="/Terms&Conditions" element={<Terms />} />
+      <Route path="/dashboard/*" element={<DashboardWithAuthorization />} />
+      <Route path="*" element={<Error404 />} />
+    </Routes>
+  </Router>
   );
 }
 

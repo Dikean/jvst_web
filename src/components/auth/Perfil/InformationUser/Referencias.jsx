@@ -53,6 +53,9 @@ export default function Referencias_info() {
         icon: 'success',
         title: 'Archivo enviado!',
         text: 'El archivo se ha enviado correctamente.',
+      }).then(() => {
+        // Recargar la página
+        window.location.reload();
       });
     } catch (error) {
       console.error('Error al enviar los datos:', error);

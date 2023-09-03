@@ -38,7 +38,7 @@ import { UserApi } from '../../services/UserApi';
     
       // Mostrar SweetAlert de carga
       Swal.fire({
-        title: 'Espere un momento...',
+        title: 'Espere un momento...!, este proceso puede tomar unos minutos',
         allowOutsideClick: false,
         showConfirmButton: false,
         willOpen: () => {
@@ -131,7 +131,7 @@ import { UserApi } from '../../services/UserApi';
                     </label>
                 </div>
             <div class="text-sm">
-                <a href="/Forgot_password" class="font-medium text-indigo-500 hover:text-indigo-500">
+                <a href="/#/Forgot_password" class="font-medium text-indigo-500 hover:text-indigo-500">
                          Olvidaste tú contraseña?
                 </a>
             </div>
@@ -144,7 +144,7 @@ import { UserApi } from '../../services/UserApi';
         </div>
         <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
             <span>No tienes cuenta?</span>
-            <a href="/Register" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Crear</a>
+            <a href="/#/Register" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Crear</a>
         </p>
     </form>
 </div>

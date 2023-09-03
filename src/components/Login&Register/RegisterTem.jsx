@@ -61,7 +61,7 @@ function RegisterTerm() {
         });
 
        // Verifica si todos los campos obligatorios están llenos
-  if (!name || !lastname || !email || !password || !Confirmpassword) {
+  if (!name  || !email || !password || !Confirmpassword) {
     // Algunos campos están vacíos, muestra un SweetAlert de error
     Swal.fire({
       icon: 'error',
@@ -95,7 +95,6 @@ function RegisterTerm() {
   
       const registrationData = {
         name,
-        lastname,
         email,
         password, 
         role: 'user',
@@ -162,19 +161,8 @@ function RegisterTerm() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
             </div>
-            <label class="text-sm font-bold text-gray-700 tracking-wide">Nombre Completo *</label>
+            <label class="text-sm font-bold text-gray-700 tracking-wide">Nombre y apellido Completo *</label>
             <input class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Ingrese su Nombre"  value={name}   onChange={handleNameChange} id="name"/>
-        </div>
-          {/* <!---lastname--> */}
-          <div class="relative">
-            <div class="absolute right-0 mt-4" style={{ display: lastname.trim() !== '' ? 'block' : 'none' }} id="checkIcon"><svg xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-            </div>
-            <label class="text-sm font-bold text-gray-700 tracking-wide">Apellido *</label>
-            <input class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="Ingrese su Apellido"  value={lastname}   onChange={handleLastnameChange} id="lastname"/>
         </div>
         {/* <!---email--> */}
         <div class="relative">
@@ -236,7 +224,7 @@ function RegisterTerm() {
                     </label>
                 </div>
             <div class="text-sm">
-                <a href="/Forgot_password" class="font-medium text-indigo-500 hover:text-indigo-500">
+                <a href="/#/Forgot_password" class="font-medium text-indigo-500 hover:text-indigo-500">
                             Olvidaste tú contraseña?
                 </a>
             </div>
@@ -249,7 +237,7 @@ function RegisterTerm() {
         </div>
         <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
             <span>Ya tienes una cuenta?</span>
-            <a href="/Login"  type="submit" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Iniciar sección</a>
+            <a href="/#/Login"  type="submit" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Iniciar sección</a>
         </p>
     </form>
 </div></div>
